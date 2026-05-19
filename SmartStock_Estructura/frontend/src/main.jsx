@@ -14,7 +14,7 @@ import EmailConfirmado from "./pages/EmailConfirmado"; // ⬅️ AGREGADO
 
 // 🎨 Estilos globales
 import "./styles/variables.css";
-import "./styles/app.css";
+import "./styles/App.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
