@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+  --azul-oscuro: #2E3548;
+  --gris-medio: #6C6A6D;
+  --gris-claro: #B1AAA5;
+  --beige-suave: #D8D2CD;
+  --blanco: #F4F0ED;
+  --fuente-principal: 'Poppins', sans-serif;
+}
+
+/* ===== ESTRUCTURA GENERAL ===== */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: var(--fuente-principal);
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--beige-suave), var(--blanco));
+}
+
+.register-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* ===== LADO IZQUIERDO ===== */
+.register-left {
+  flex: 1;
+  background: linear-gradient(160deg, var(--azul-oscuro), var(--gris-medio));
+  color: var(--blanco);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.register-left h1 {
+  font-size: 2.6rem;
+  margin: 0;
+  letter-spacing: 0.6px;
+}
+
+.register-left p {
+  margin-top: 0.6rem;
+  opacity: 0.9;
+  font-size: 1.05rem;
+}
+
+/* ===== LADO DERECHO ===== */
+.register-right {
+  flex: 1;
+  background: var(--beige-suave);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== CARD ===== */
+.register-card {
+  background: var(--blanco);
+  padding: 2.6rem 2.2rem;
+  border-radius: 18px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
+  width: 92%;
+  max-width: 420px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register-card h2 {
+  color: var(--azul-oscuro);
+  margin-bottom: 1.2rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+/* ===== FORM ===== */
+.register-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.register-form input {
+  width: 100%;
+  max-width: 340px;
+  padding: 12px 14px;
+  border: 1px solid var(--gris-claro);
+  border-radius: 10px;
+  background: var(--blanco);
+  font-size: 1rem;
+  color: var(--azul-oscuro);
+  box-sizing: border-box;
+}
+
+.register-button {
+  width: 100%;
+  max-width: 340px;
+  padding: 12px 14px;
+  background: var(--gris-medio);
+  color: var(--blanco);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: transform .18s ease, background .18s ease;
+}
+
+.register-button:hover { 
+  background: var(--azul-oscuro);
+  transform: translateY(-2px);
+}
+
+/* ===== LINKS ===== */
+.register-links {
+  margin-top: 14px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 340px;
+  font-size: 0.9rem;
+}
+
+.register-links a {
+  color: var(--gris-medio);
+  text-decoration: none;
+}
+
+.register-links a:hover {
+  color: var(--azul-oscuro);
+}
+
+/* ===== CUBO ANIMADO ===== */
+.cube-logo {
+  width: 120px;
+  height: 120px;
+  perspective: 800px;
+  margin-bottom: 1.5rem;
+}
+
+.cube {
+  width: 90px;
+  height: 90px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(-20deg) rotateY(30deg);
+  animation: spinCube 6s linear infinite;
+}
+
+.face {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.3);
+  box-shadow: inset 0 0 10px rgba(255,255,255,0.2);
+  border-radius: 4px;
+}
+
+.front  { transform: translateZ(45px); }
+.back   { transform: rotateY(180deg) translateZ(45px); }
+.right  { transform: rotateY(90deg) translateZ(45px); }
+.left   { transform: rotateY(-90deg) translateZ(45px); }
+.top    { transform: rotateX(90deg) translateZ(45px); }
+.bottom { transform: rotateX(-90deg) translateZ(45px); }
+
+@keyframes spinCube {
+  0% { transform: rotateX(-20deg) rotateY(0deg); }
+  100% { transform: rotateX(-20deg) rotateY(360deg); }
+}

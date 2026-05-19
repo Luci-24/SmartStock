@@ -1,0 +1,9 @@
+:root {
+  --azul-oscuro: #2E3548;      /* Azul grisáceo profundo */
+  --gris-oscuro: #59575E;      /* Gris elegante */
+  --gris-medio: #96908c;       /* Gris cálido */
+  --gris-claro: #D8D2CD;       /* Beige grisáceo */
+  --blanco: #F4F0ED;           /* Blanco cálido */
+  --fuente-principal: 'Poppins', sans-serif;
+}
+

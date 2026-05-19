@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@supabase/supabase-js": "^2.75.1",
+    "jspdf": "^3.0.3",
+    "jspdf-autotable": "^5.0.2",
+    "react-router-dom": "^7.9.4",
+    "recharts": "^3.4.1"
+  }
+}

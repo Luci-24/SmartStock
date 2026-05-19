@@ -1,0 +1,187 @@
+.config-layout {
+  display: flex;
+  height: 100vh;
+  background: #f9f9fb;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ======== MODO OSCURO ======== */
+.config-layout.oscuro {
+  background: #1c1c24;
+  color: #e2e2e2;
+}
+
+.config-layout.oscuro input,
+.config-layout.oscuro select {
+  background: #2b2b36;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+.config-layout.oscuro .config-form {
+  background: #2a2a33;
+}
+
+.config-layout.oscuro .btn-guardar {
+  background: #6c63ff;
+}
+
+/* ======== MAIN ======== */
+.config-main {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.config-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.config-header h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+/* ======== FORMULARIO ======== */
+.config-form {
+  max-width: 600px;
+  background: #fff;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.config-form h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #4a3aff;
+}
+
+.config-form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.config-form input,
+.config-form select {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: all 0.3s;
+}
+
+.config-form input:focus,
+.config-form select:focus {
+  border-color: #7a5af5;
+  outline: none;
+}
+
+.btn-guardar {
+  margin-top: 2rem;
+  background: #7a5af5;
+  color: white;
+  border: none;
+  padding: 0.9rem 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-guardar:hover {
+  background: #5e46d8;
+}
+
+/* ======== SWITCH DE MODO OSCURO ======== */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 26px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #1c1f2b;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+/* === BOTÓN GUARDAR ESTILO SMARTSTOCK AZUL ELEGANTE === */
+.btn-guardar {
+  margin-top: 2rem;
+  background: linear-gradient(135deg, #1e203f, #2a2d57);
+  color: #fff;
+  border: none;
+  padding: 0.9rem 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 10px rgba(30, 32, 63, 0.3);
+}
+
+.btn-guardar:hover {
+  background: linear-gradient(135deg, #2a2d57, #353768);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(30, 32, 63, 0.4);
+}
+
+/* === MODO OSCURO === */
+.config-layout.oscuro .btn-guardar {
+  background: linear-gradient(135deg, #2a2d57, #353768);
+}
+
+.config-layout.oscuro .btn-guardar:hover {
+  background: linear-gradient(135deg, #353768, #40427a);
+}
+
+/* === TÍTULO "Opciones Generales" CON EL MISMO AZUL ELEGANTE === */
+.config-form h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #1e203f, #2a2d57);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
