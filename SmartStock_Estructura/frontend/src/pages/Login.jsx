@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "../styles/app.css";
+import "../styles/App.css";
 import { db } from "../supabase/firebaseCliente";
 import { login } from "../services/authService";
 import { collection, query, where, getDocs } from "firebase/firestore";
