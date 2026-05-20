@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "../styles/register.css";
+import "../styles/Register.css";
 import { register } from "../services/authService";
 
 export default function Register() {
